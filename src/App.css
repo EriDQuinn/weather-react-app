@@ -1,0 +1,12 @@
+.App {
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(125, 171, 255, 0.8831908831908832) 2%,
+    rgba(156, 218, 255, 0.9145299145299145) 31%,
+    rgba(177, 255, 244, 0.88) 71%
+  );
+}
+.main-cont {
+  background-color: rgba(255, 255, 255, 0.658);
+}
