@@ -1,5 +1,6 @@
 import React from "react";
 import "./weather.css";
+import Forecast from "./Forecast";
 
 export default function Weather() {
   return (
@@ -27,7 +28,9 @@ export default function Weather() {
         <p>Wind: wind km/h</p>
       </div>
 
-      <div class="container p-3">forecast</div>
+      <div class="container p-3">
+        <Forecast />
+      </div>
     </div>
   );
 }
