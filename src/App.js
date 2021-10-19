@@ -6,7 +6,7 @@ function App() {
     <div className="App p-5">
       <div className="container main-cont rounded border m-5 p-2">
         <h1 className=" title text-center m-2">Weather app</h1>
-        <Weather />
+        <Weather city="London" />
       </div>
       <footer className=" m-5">
         This project was created by{" "}
