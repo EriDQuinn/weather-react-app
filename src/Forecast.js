@@ -1,10 +1,11 @@
+import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 import "./forecast.css";
 
 const defaults = {
   icon: "CLEAR_DAY",
   color: "goldenrod",
-  size: "32px",
+  size: 22,
   animate: true,
 };
 export default function Forecast() {
