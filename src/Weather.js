@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./weather.css";
 import Forecast from "./Forecast";
-import OurDate from "./OurDate";
+
 import Search from "./Search";
 
 export default function Weather(props) {
   const [data, setData] = useState({ loaded: false });
+  const [city, setCity] = useState(props.city);
 
   function showResponse(response) {
     //var d = new Date(response.data.dt * 1000);
@@ -22,22 +23,34 @@ export default function Weather(props) {
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather["0"].icon}@2x.png`,
     });
   }
-
+  function search() {
+    let apiKey = "e36512df4df508262b473b23a2ee8768";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(showResponse);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
   if (data.loaded) {
     return (
       <div className="Weather d-flex">
         <div className="container p-3">
-          <form className="d-flex m-2">
+          <form className="d-flex m-2" onSubmit={handleSubmit}>
             <input
               type="search"
               placeholder="Search"
               className="form-control-sm m-2 border-light"
+              onChange={handleCityChange}
             />
             <button className="btn btn-sm btn-info m-2" type="submit">
               Search
             </button>
           </form>
-          <Search />
+          <Search data={data} />
         </div>
 
         <div className="container p-3">
@@ -46,9 +59,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    let apiKey = "e36512df4df508262b473b23a2ee8768";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&units=metric&appid=${apiKey}`;
-    axios.get(apiUrl).then(showResponse);
+    search();
     return "Loading";
   }
 }
