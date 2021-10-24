@@ -12,6 +12,7 @@ export default function Weather(props) {
   function showResponse(response) {
     //var d = new Date(response.data.dt * 1000);
     //console.log(d.getDay());
+    console.log(response.data.weather["0"].icon);
     setData({
       loaded: true,
       temp: response.data.main.temp,
@@ -20,7 +21,8 @@ export default function Weather(props) {
       d: new Date(response.data.dt * 1000),
       description: response.data.weather["0"].description,
       humidity: response.data.main.humidity,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather["0"].icon}@2x.png`,
+      //iconUrl: `http://openweathermap.org/img/wn/${response.data.weather["0"].icon}@2x.png`,
+      icon: response.data.weather["0"].icon,
     });
   }
   function search() {
