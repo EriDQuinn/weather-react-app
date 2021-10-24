@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App p-5">
-      <div className="container main-cont rounded border m-5 p-2">
+      <div className="container main-cont rounded border p-5">
         <h1 className=" title text-center m-2">Weather app</h1>
         <Weather city="London" />
       </div>
