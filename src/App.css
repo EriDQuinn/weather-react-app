@@ -1,5 +1,6 @@
 .App {
   height: 100%;
+
   background: linear-gradient(
     180deg,
     rgba(125, 171, 255, 0.8831908831908832) 2%,
@@ -8,5 +9,8 @@
   );
 }
 .main-cont {
-  background-color: rgba(255, 255, 255, 0.658);
+  background-color: rgba(245, 255, 253, 0.966);
+  max-width: 960px;
+  -webkit-box-shadow: 17px 13px 39px 15px rgba(0, 0, 0, 0.75);
+  box-shadow: 17px 13px 39px 15px rgba(0, 0, 0, 0.75);
 }
