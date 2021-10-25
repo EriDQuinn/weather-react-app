@@ -1,5 +1,6 @@
 import React from "react";
 import OurDate from "./OurDate";
+import Temperature from "./Temperature";
 import WeatherIcon from "./WeatherIcon";
 
 export default function Search(props) {
@@ -9,10 +10,10 @@ export default function Search(props) {
       <h4 className="icon">
         <WeatherIcon code={props.data.icon} alt={props.data.description} />
       </h4>
-      <h2 className="temperature"> {Math.round(props.data.temp)} °C</h2>
-      <div>
-        <OurDate fecha={props.data.d} />
-      </div>
+      <Temperature celcius={props.data.temp} />
+
+      <OurDate fecha={props.data.d} />
+
       <hr></hr>
       <p>Description: {props.data.description} </p>
       <p>Humidity: {props.data.humidity} %</p>
