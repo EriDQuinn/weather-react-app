@@ -1,3 +1,9 @@
 .temperature {
-  color: rgba(121, 167, 253, 0.815);
+  color: #7daff1;
+}
+a {
+  color: rgb(12, 108, 163);
+}
+a:hover {
+  color: rgb(16, 193, 247);
 }
