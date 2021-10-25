@@ -62,6 +62,10 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading";
+    return (
+      <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    );
   }
 }
