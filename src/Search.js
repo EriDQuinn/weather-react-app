@@ -8,7 +8,11 @@ export default function Search(props) {
     <div className="Search">
       <h4 className="text-center">{props.data.city}</h4>
       <h4 className="icon">
-        <WeatherIcon code={props.data.icon} alt={props.data.description} />
+        <WeatherIcon
+          code={props.data.icon}
+          alt={props.data.description}
+          size={82}
+        />
       </h4>
       <Temperature celcius={props.data.temp} />
 
