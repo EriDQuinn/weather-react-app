@@ -3,8 +3,8 @@ import ReactAnimatedWeather from "react-animated-weather";
 
 const defaults = {
   icon: "CLEAR_DAY",
-  color: "#a97986",
-  size: 72,
+  color: "#7daff1",
+  size: 82,
   animate: true,
 };
 
@@ -31,11 +31,13 @@ export default function WeatherIcon(props) {
   };
 
   return (
-    <ReactAnimatedWeather
-      icon={codeMapping[props.code]}
-      color={defaults.color}
-      size={defaults.size}
-      animate={defaults.animate}
-    />
+    <div className="d-flex justify-content-center m-4">
+      <ReactAnimatedWeather
+        icon={codeMapping[props.code]}
+        color={defaults.color}
+        size={defaults.size}
+        animate={defaults.animate}
+      />
+    </div>
   );
 }
