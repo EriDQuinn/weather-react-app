@@ -15,6 +15,7 @@ export default function Weather(props) {
     console.log(response.data.weather["0"].icon);
     setData({
       loaded: true,
+      coords: response.data.coord,
       temp: response.data.main.temp,
       wind: response.data.wind.speed,
       city: response.data.name,
@@ -56,7 +57,7 @@ export default function Weather(props) {
         </div>
 
         <div className="container p-3">
-          <Forecast />
+          <Forecast coords={data.coords} />
         </div>
       </div>
     );
