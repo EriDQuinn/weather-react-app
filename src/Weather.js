@@ -12,7 +12,7 @@ export default function Weather(props) {
   function showResponse(response) {
     //var d = new Date(response.data.dt * 1000);
     //console.log(d.getDay());
-    console.log(response.data.weather["0"].icon);
+
     setData({
       loaded: true,
       coords: response.data.coord,
@@ -64,8 +64,8 @@ export default function Weather(props) {
   } else {
     search();
     return (
-      <div class="spinner-border text-info" role="status">
-        <span class="visually-hidden">Loading...</span>
+      <div className="spinner-border text-info" role="status">
+        <span className="visually-hidden">Loading...</span>
       </div>
     );
   }
