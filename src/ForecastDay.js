@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
+import "./forecastDay.css";
 
 export default function ForecastDay(props) {
   function day() {
@@ -18,7 +19,7 @@ export default function ForecastDay(props) {
   }
   return (
     <div className="card p-3 bg-transparent border border-white">
-      <div className="card-header">{day()}</div>{" "}
+      <div className="card-header text-center">{day()}</div>{" "}
       <WeatherIcon code={props.data.weather["0"].icon} size={36} />
       <div>
         <span className="TempMin">{minTemp()}</span>

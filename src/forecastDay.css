@@ -1,0 +1,9 @@
+.TempMin,
+.TempMax {
+  font-size: 14px;
+  margin-left: 25%;
+}
+.card-header {
+  text-decoration: darkslateblue;
+  font-weight: 500;
+}
